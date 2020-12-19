@@ -165,9 +165,9 @@ if __name__ == '__main__':
 #                                     0.4, (255, 0, 0), 2)
 #                 frame = cv2.putText(frame, action, (bbox[0] + 5, bbox[1] + 15), cv2.FONT_HERSHEY_COMPLEX,
 #                                     0.4, clr, 1)
-                print(bbox),
-                print(track_id),
-                print(action)
+                    print(bbox),
+                    print(track_id),
+                    print(action)
 
         # Show Frame.
 #         frame = cv2.resize(frame, (0, 0), fx=2., fy=2.)
