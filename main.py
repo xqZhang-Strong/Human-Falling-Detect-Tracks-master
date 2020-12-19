@@ -159,24 +159,27 @@ if __name__ == '__main__':
             # VISUALIZE.
             if track.time_since_update == 0:
                 if args.show_skeleton:
-                    frame = draw_single(frame, track.keypoints_list[-1])
-                frame = cv2.rectangle(frame, (bbox[0], bbox[1]), (bbox[2], bbox[3]), (0, 255, 0), 1)
-                frame = cv2.putText(frame, str(track_id), (center[0], center[1]), cv2.FONT_HERSHEY_COMPLEX,
-                                    0.4, (255, 0, 0), 2)
-                frame = cv2.putText(frame, action, (bbox[0] + 5, bbox[1] + 15), cv2.FONT_HERSHEY_COMPLEX,
-                                    0.4, clr, 1)
+#                     frame = draw_single(frame, track.keypoints_list[-1])
+#                 frame = cv2.rectangle(frame, (bbox[0], bbox[1]), (bbox[2], bbox[3]), (0, 255, 0), 1)
+#                 frame = cv2.putText(frame, str(track_id), (center[0], center[1]), cv2.FONT_HERSHEY_COMPLEX,
+#                                     0.4, (255, 0, 0), 2)
+#                 frame = cv2.putText(frame, action, (bbox[0] + 5, bbox[1] + 15), cv2.FONT_HERSHEY_COMPLEX,
+#                                     0.4, clr, 1)
+                print(bbox),
+                print(track_id),
+                print(action)
 
         # Show Frame.
-        frame = cv2.resize(frame, (0, 0), fx=2., fy=2.)
-        frame = cv2.putText(frame, '%d, FPS: %f' % (f, 1.0 / (time.time() - fps_time)),
-                            (10, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 1)
-        frame = frame[:, :, ::-1]
-        fps_time = time.time()
+#         frame = cv2.resize(frame, (0, 0), fx=2., fy=2.)
+#         frame = cv2.putText(frame, '%d, FPS: %f' % (f, 1.0 / (time.time() - fps_time)),
+#                             (10, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 1)
+#         frame = frame[:, :, ::-1]
+#         fps_time = time.time()
 
-        if outvid:
-            writer.write(frame)
+#         if outvid:
+#             writer.write(frame)
 
-        cv2.imshow('frame', frame)
+#         cv2.imshow('frame', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
