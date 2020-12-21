@@ -180,11 +180,11 @@ if __name__ == '__main__':
 #             writer.write(frame)
 
 #         cv2.imshow('frame', frame)
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            break
+#         if cv2.waitKey(1) & 0xFF == ord('q'):
+#             break
 
     # Clear resource.
     cam.stop()
-    if outvid:
-        writer.release()
-    cv2.destroyAllWindows()
+#     if outvid:
+#         writer.release()
+#     cv2.destroyAllWindows()
